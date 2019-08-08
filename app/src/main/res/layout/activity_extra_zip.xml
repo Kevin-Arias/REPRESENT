@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExtraZipActivity">
+
+
+
+        <ImageView
+            android:id="@+id/first_senator"
+            android:layout_width="109dp"
+            android:layout_height="162dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/second_senator"
+            android:layout_width="109dp"
+            android:layout_height="146dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box1" />
+
+        <ImageView
+            android:id="@+id/rep_house"
+            android:layout_width="109dp"
+            android:layout_height="162dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box2" />
+
+        <Button
+            android:id="@+id/more_info1"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:onClick="first_openDetailedActivity"
+            android:text="More Info+"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location" />
+
+        <Button
+            android:id="@+id/more_info2"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="5dp"
+            android:onClick="second_openDetailedActivity"
+            android:text="More Info+"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box1" />
+
+        <Button
+            android:id="@+id/more_info3"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="5dp"
+            android:onClick="rep_openDetailedActivity"
+            android:text="@string/more_info"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box2" />
+
+        <TextView
+            android:id="@+id/description1"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp"
+            android:gravity="center"
+            android:text="@string/us_senator"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/first_senator" />
+
+        <TextView
+            android:id="@+id/description2"
+            android:layout_width="87dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp"
+            android:gravity="center"
+            android:text="US Senator"
+            android:textStyle="bold"
+            android:textSize="17sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/second_senator" />
+
+        <TextView
+            android:id="@+id/description3"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp"
+            android:gravity="center"
+            android:text="@string/house_rep"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rep_house" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="13dp"
+            android:gravity="right"
+            android:text="            "
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_fs"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text=" "
+            android:elevation="5dp"
+            android:textSize="15sp"
+
+            app:layout_constraintStart_toEndOf="@+id/first_senator"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/party_fs"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text=" "
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/first_senator"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/email_fs"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:clickable="true"
+            android:textColorLink="#000000"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text=" "
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/first_senator"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/website_fs"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text=" "
+            android:autoLink="all"
+            android:clickable="true"
+            android:textColorLink="#000000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/first_senator"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/name_ss"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text=" "
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/second_senator"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/party_ss"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text=" "
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/second_senator"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/website_ss"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text=" "
+            android:autoLink="all"
+            android:clickable="true"
+            android:textColorLink="#000000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/second_senator"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/name_rh"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text=" "
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/rep_house"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <TextView
+            android:id="@+id/party_rh"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text=" "
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/rep_house"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <TextView
+            android:id="@+id/website_rh"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text=" "
+            android:autoLink="all"
+            android:clickable="true"
+            android:textColorLink="#000000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <TextView
+            android:id="@+id/email_ss"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text=" "
+            android:autoLink="all"
+            android:clickable="true"
+            android:textColorLink="#000000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/second_senator"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/email_rh"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text=" "
+            android:autoLink="all"
+            android:clickable="true"
+            android:textColorLink="#000000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/rep_house"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="55dp"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/first_senator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center"
+            android:text="@string/party"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/first_senator"
+            app:layout_constraintTop_toBottomOf="@+id/name_fs" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="@string/website"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/first_senator"
+            app:layout_constraintTop_toBottomOf="@+id/party_fs" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="@string/email"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/first_senator"
+            app:layout_constraintTop_toBottomOf="@+id/email_fs" />
+
+        <TextView
+            android:id="@+id/box1"
+            android:layout_width="412dp"
+            android:layout_height="218dp"
+
+            android:text=" "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:text="NAME:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/second_senator"
+            app:layout_constraintTop_toBottomOf="@+id/box1" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="0dp"
+            android:text="PARTY:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/second_senator"
+            app:layout_constraintTop_toBottomOf="@+id/name_ss" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="WEBSITE:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/second_senator"
+            app:layout_constraintTop_toBottomOf="@+id/party_ss" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="EMAIL:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/second_senator"
+            app:layout_constraintTop_toBottomOf="@+id/email_ss" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:text="NAME:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/rep_house"
+            app:layout_constraintTop_toBottomOf="@+id/box2" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="PARTY:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/rep_house"
+            app:layout_constraintTop_toBottomOf="@+id/name_rh" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="WEBSITE:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/rep_house"
+            app:layout_constraintTop_toBottomOf="@+id/party_rh" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="EMAIL:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/rep_house"
+            app:layout_constraintTop_toBottomOf="@+id/email_rh" />
+
+        <TextView
+            android:id="@+id/box2"
+            android:layout_width="412dp"
+            android:layout_height="218dp"
+            android:text=" "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box1" />
+
+        <TextView
+            android:id="@+id/box3"
+            android:layout_width="412dp"
+            android:layout_height="215dp"
+            android:text=" "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box2" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:text="Current ZIP Code: "
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/location"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/extra_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="extrarep_openDetailedActivity"
+        android:text="Extra Rep. Info+"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+

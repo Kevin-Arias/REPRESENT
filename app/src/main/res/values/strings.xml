@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">REPRESENT</string>
+    <string name="represent">REPRESENT!</string>
+    <string name="welcome">Welcome!</string>
+    <string name="enter_one_of_the_following">Enter one of the following:</string>
+    <string name="random_location">Random Location</string>
+    <string name="current_location">Current Location</string>
+
+    <string name="status">STATUS</string>
+    <string name="textview">TextView</string>
+    <string name="us_senator">US Senator</string>
+    <string name="rep_from_house">Rep. From House</string>
+    <string name="more_info">More Info+</string>
+    <string name="title_activity_detailed">DetailedActivity</string>
+    <string name="name">NAME:</string>
+    <string name="party">PARTY:</string>
+    <string name="website">WEBSITE:</string>
+    <string name="email">EMAIL:</string>
+    <string name="house_rep">House Rep.</string>
+    <string name="current_committees_serving">CURRENT COMMITTEES SERVING:</string>
+    <string name="recent_bills_sponsored">RECENT BILLS SPONSORED:</string>
+    <string name="enter_a_zip_code_below">Enter A Zip Code Below:</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="search">SEARCH</string>
+
+
+</resources>
