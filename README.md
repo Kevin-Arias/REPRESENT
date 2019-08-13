@@ -2,14 +2,46 @@
 
 Observed and interviewed bay area natives on their experiences with government elections. With the information gathered, I fully designed and developed a mobile application through Android Studio and Figma that lets users input their location and receive detailed information on the three congressional representatives for the user’s political district using the ProPublica Congress API.
 
+## Home Screen
 
-<p align="center">
-  <img width="502" alt="1" src="https://user-images.githubusercontent.com/16792195/62669267-db9da580-b943-11e9-8548-b28b690191aa.png" >
-</p>
+This is the home screen of the Represent! App. The application welcomes the user and allows them to either enter a ZIP Code, select their current location, or let the application choose a random location. The user can press any of the three buttons on the home screen (depending on what location they decide to use) in order to progress to the rest of the application. For future reference, if the user decides to press “ZIP Code”, they are required to input a ZIP Code. If a user decides to press “Current Location”, they will not need to input any information, the app will automatically use the user’s current location saved on their phone and take them directly to the Congressional View Screen (described later) where the app will return the three congressional representatives based on their location. If the user decides to press “Random Location” for fun, it will work EXACTLY the same way as the “Current Location” button described previously except that instead of using a user’s current location, it will randomly select a location.
 
-<img width="496" alt="2" src="https://user-images.githubusercontent.com/16792195/62669270-dc363c00-b943-11e9-82ac-eafdd496759c.png">
-<img width="496" alt="3" src="https://user-images.githubusercontent.com/16792195/62669271-dc363c00-b943-11e9-8c8d-a9ecd8c3e391.png">
-<img width="496" alt="4" src="https://user-images.githubusercontent.com/16792195/62669268-dc363c00-b943-11e9-9343-8dd9cf5c429b.png">
-<img width="496" alt="5" src="https://user-images.githubusercontent.com/16792195/62669269-dc363c00-b943-11e9-9b99-b9ddbba8d171.png">
-<img width="496" alt="6" src="https://user-images.githubusercontent.com/16792195/62669273-dc363c00-b943-11e9-9652-584698f09813.png">
-<img width="497" alt="7" src="https://user-images.githubusercontent.com/16792195/62669272-dc363c00-b943-11e9-95a3-e6d3cded9973.png">
+![1](https://user-images.githubusercontent.com/16792195/62983362-ef358a00-bde3-11e9-9fa9-b079e185fbe2.png) 
+
+## Input Zip Code Screen
+
+This screen shows us what would happen if the user decided to input their Zip Code into the application. Once a user presses on the “ZIP Code” button, a pop up will appear on the screen prompting users to enter their ZIP Code. By clicking on the box with the “ZIP Code” hint, a numerical keyboard will appear allowing users to enter their ZIP Code. After finishing entering a ZIP Code, the user can press the “SEARCH” button to be guided to the Congressional View for ZIP Code screen. If for any reason, a user accidentally clicked on the “ZIP Code” button and want the pop up to disappear, the user can just click anywhere on the screen outside of the pop up and will be back on the home screen.
+
+![2](https://user-images.githubusercontent.com/16792195/62983368-f2307a80-bde3-11e9-973c-75c0855c1df4.png)
+
+## Congressional View for Zip Code
+
+This screen displays to the user three members of Congress (two Senators and one Representative) based on the ZIP Code that the user provided. For each of the members of congress, information including their full name, political party, email (with clickable link), and website (also with clickable link) will be displayed to the right of their corresponding descriptions. If a website or email was not available or found on record, then next to their corresponding sections it will state “None Found”. Also if no pictures were found of a certain member, the area meant for showing their picture will be blank. Below each of their pictures is a description of whether each member is a US Senator or a representative from the House. In order to be more visually informative, the user can also immediately identify each member’s political party based on the color in the background where each member’s information is displayed (blue is for Democrat, red is for Republican, and grey is for Independent). On top of the information of each member is a “More Info +” button, which when pushed will provide the user a way to get more information about each of the members in the Detailed View Screen. On the top right of the screen, there is a description of the estimated current location based off of the user’s inputted ZIP Code.
+
+![3](https://user-images.githubusercontent.com/16792195/62983371-f361a780-bde3-11e9-94c8-7f368dca3494.png)
+
+## Congressional View for Zip Code That Returns More Than One Representative
+
+This screen is displayed in the special case when a user enters a ZIP Code and more than one representative is returned. Upon opening the screen, an alert informing the user that more than one representative was returned will pop up. The pop up will inform the user that the information of the extra Representative can be accessed by clicking on the “Extra Rep Info +” button on the top left of the screen, the button will take you directly to the Detailed View Screen for the extra representative returned. This screen otherwise looks and interacts exactly the same as the Congressional View for ZIP Code screen so if you want a more detailed explanation of how to interact with this screen, please read the previous page discussing Congressional View for ZIP Code screen. What is different however, is that since there is some ambiguity with the ZIP Code (ZIP Code covers various districts), on the top right of the screen it will inform the user of the Current ZIP Code this screen is using instead of displaying the current city because the ZIP Code is more ambiguous.
+
+![3-1](https://user-images.githubusercontent.com/16792195/62983375-f65c9800-bde3-11e9-81e3-7c023f12c51e.png)
+![3-2](https://user-images.githubusercontent.com/16792195/62983376-f78dc500-bde3-11e9-8a93-093cc68f7ec0.png)
+
+## Congressional View for Current Location
+
+This screen displays to the user three members of Congress (two Senators and one Representative) based on the Current Location that is currently being used on the user’s phone. For each of the members of congress, information including their full name, political party, email (with clickable link), and website (also with clickable link) will be displayed to the right of their corresponding descriptions. If a website or email was not available or found on record, then next to their corresponding sections it will state “None Found”. Also if no pictures were found of a certain member, the area meant for showing their picture will be blank. Below each of their pictures is a description of whether each member is a US Senator or a representative from the House. In order to be more visually informative, the user can also immediately identify each member’s political party based on the color in the background where each member’s information is displayed (blue is for Democrat, red is for Republican, and grey is for Independent). On top of the information of each member is a “More Info +” button, which when pushed will provide the user a way to get more information about each of the members in the Detailed View Screen. On the top right of the screen, there is a description of the estimated current location based off of the user’s phone’s location settings.
+
+![4](https://user-images.githubusercontent.com/16792195/62983379-f8bef200-bde3-11e9-99fe-98ee1ae1f203.png)
+
+## Congressional View for Random Location
+
+This screen displays to the user three members of Congress (two Senators and one Representative) based on a Random Location throughout the ENTIRE United States. I used a CSV file from (https://simplemaps.com/data/us-zips) that contains every city from every state in the United States. From the CSV file, the application will select a random city and display their designated three Members of Congress. For each of the members of congress, information including their full name, political party, email (with clickable link), and website (also with clickable link) will be displayed to the right of their corresponding descriptions. If a website or email was not available or found on record, then next to their corresponding sections it will state “None Found”. Also if no pictures were found of a certain member, the area meant for showing their picture will be blank. Below each of their pictures is a description of whether each member is a US Senator or a representative from the House. In order to be more visually informative, the user can also immediately identify each member’s political party based on the color in the background where each member’s information is displayed (blue is for Democrat, red is for Republican, and grey is for Independent). On top of the information of each member is a “More Info +” button, which when pushed will provide the user a way to get more information about each of the members in the Detailed View Screen. On the top right of the screen, there is also a description of the current city and state that was randomly selected.
+
+![5](https://user-images.githubusercontent.com/16792195/62983380-fb214c00-bde3-11e9-9e60-6f8d0066e076.png)
+
+## Detailed View
+
+This screen is displayed when a user clicks the “More Info +” button for one of the members from the previously described screens. This way, a user will now be able to get more information from one of the members returned by the API. Each detailed view for a single member includes a picture of the member, a label describing whether the member is a US Senator or a representative from the House, their political party, name of committee they currently serve on, and name of recent bills they have sponsored and the dates each bill was introduced. I decided to define recent bills as the five most recent bills each member has helped introduce. In order to be more visually informative, the user can also immediately identify the member’s political party based on the color in the background of the screen (blue is for Democrat, red is for Republican, and grey is for Independent). Since there is a lot of information available, the user has the ability to scroll the page up and down to be able to view all of the information the application has to offer.
+
+![6-1](https://user-images.githubusercontent.com/16792195/62983382-fc527900-bde3-11e9-8e7c-911cada17b4f.png)
+![6-2](https://user-images.githubusercontent.com/16792195/62983389-feb4d300-bde3-11e9-9798-7183ded8fa01.png)
